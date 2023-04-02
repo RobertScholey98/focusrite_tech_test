@@ -1,4 +1,4 @@
-console.log('hello focusrite');
+import readFile from "./readFile"
 
-const notNumber: string = '6';
-const test: number = notNumber + 1;
+const fileContents = readFile('files/input.txt')
+console.log(fileContents)
