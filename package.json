@@ -1,0 +1,21 @@
+{
+  "name": "focusrite_tech_test",
+  "version": "1.0.0",
+  "description": "A project to read bingo cards and chosen numbers from a txt file to determine if the cards are winners or not",
+  "main": "index.js",
+  "repository": "https://github.com/RobertScholey98/focusrite_tech_test.git",
+  "author": "Robert Scholey <robertscholey98@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "tsc && nodemon bin/index.js"
+  },
+  "dependencies": {
+    "@types/node": "^18.15.11",
+    "typescript": "^5.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1"
+  }
+}
