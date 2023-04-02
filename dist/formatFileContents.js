@@ -17,6 +17,7 @@ const parse = (target, condition) => {
     return resultStrings.map((item) => parseInt(item.trim()));
 };
 // If we were implementing variable card sizes then cardSize would need to be dynamic as well as replacing StandardBingoCard with BingoCard<dynamicSize>
+// Alternatively, we could create a union type combining pre-allowed card sizes such as StandardBingoCard and MegaBingoCard (shown in card.d.ts)
 const buildCards = (target) => {
     const emptiesFiltered = target.filter((item) => (item !== ' ' && item !== ''));
     const formattedToNumbers = emptiesFiltered.map((line) => parse(line, ' '));
@@ -41,10 +42,16 @@ function formatFileContents(rawContent) {
 exports.default = formatFileContents;
 ;
 /*
-This implementation assumes that the data will always be in the given format:
+This implementation assumes that the data will always be in the given format
+And makes the assumption that no incomplete/incorrectly formatted cards will be provided.:
+
 Line with winnings
+
 5x5 card
+
 5x5 card
+
+5x5 card
+
 ....
-And makes the assumption that no incomplete/incorrectly formatted cards will be provided.
 */ 

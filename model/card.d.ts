@@ -9,3 +9,6 @@ export type StandardBingoCard = BingoCard<5>;
 
 export type MegaBingoCard = BingoCard<7>;
 //  If we wanted to extend the program to work with 7x7 bingo cards
+
+export type UnionCard = StandardBingoCard | MegaBingoCard;
+// Combining pre-allowed cards into a single type allows us to share logic in the formatFileContent function while retaining type safety
